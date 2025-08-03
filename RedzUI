@@ -1386,51 +1386,6 @@ local Dropdown = MainTab:CreateDropdown({
             end
         end,
     })
-    
-    
-    local Button = SetTab:CreateButton({
-        Name = "Click For a Surprise",
-        Callback = function()
-            local player = game.Players.LocalPlayer
-            local starterGui = game:GetService("StarterGui")
-            
-            -- Display fake ban message
-            starterGui:SetCore("SendNotification", {
-                Title = "Surprise!!",
-                Text = "The Developers know\nWhat you're doing!",
-                Duration = 3
-            })
-            
-            -- Wait 3 seconds, then change the message
-            task.wait(2)
-    
-            starterGui:SetCore("SendNotification", {
-                Title = "BANNING INCOMING",
-                Text = "3",
-                Duration = 1.1
-            })
-    
-            task.wait(1.2)
-    
-            starterGui:SetCore("SendNotification", {
-                Title = "BANNING INCOMING",
-                Text = "2",
-                Duration = 1.1
-            })
-    
-            task.wait(1.2)
-    
-            starterGui:SetCore("SendNotification", {
-                Title = "BANNING INCOMING",
-                Text = "1",
-                Duration = 1.1
-            })
-    
-            -- Kick the player after showing the fake ban
-            task.wait(1) -- Give a slight delay before kicking
-            player:Kick("YOU HAVE BEEN BANNED! EXPLOITS DETECTED!")
-        end,
-    })
 
     
     
